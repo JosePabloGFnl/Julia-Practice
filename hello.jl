@@ -1,16 +1,16 @@
 hello = "Hello, World!"
-println(hello)
+println(hello);
 
 #Names support UTF-8 encoding
 🦍 = "Gorilla"
-println(🦍)
+println(🦍);
 
 circ = 10 * 2π
 
 #It's good at string parsing
 str = "Circumference: $circ"
 
-occursin(r"^\s*(?:#|$)", str)
+println(occursin(r"^\s*(?:#|$)", str));
 
 #Multiple expressions on a single line
 (x = 1; y = 2; x + y)
@@ -50,6 +50,7 @@ end
 arr1D = [1, 2, 3, 4]
 arr2D = [1 2; 3 4]
 matrix = zeros(Int8, 3, 3)
+println(matrix);
 
 #asynchronous computing
 t = @task begin; sleep(5); println("Task done"); end
