@@ -64,3 +64,23 @@ println(c1[end-1])
 println(c1[2:5])
 println(c1[[2,3,4,5]])
 println(c1[2:end])
+
+#Tuples in Julia
+
+tuple_1 = (1,2,3,4,5)
+println(tuple_1) #reminder that tuples are immutables, its values cannot be changed
+
+tuple_2 = ((1, 3), (2, 5))
+println(tuple_2)
+
+println(tuple_2[2][1])
+
+grades = (Science = (90,100), Maths = (95, 100), English = (100,100))
+println(grades)
+
+println(grades.Science)
+
+grades_2 = (History = (90,100), Arts = (95, 100))
+
+grades_total = merge(grades,grades_2)
+println(grades_total)
