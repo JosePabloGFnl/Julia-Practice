@@ -51,4 +51,16 @@ println(array_rand2)
 
 #Creating Ranges in Julia
 
-print(collect(1:10))
+println(collect(1:10))
+
+println(collect(1.5:.5:5.5))
+println(collect(0:20:100))
+
+c1 = collect(100:-20:0)
+println(c1) #this works like an array so any function applied to a normal array works here
+println(c1[3])
+println(c1[end])
+println(c1[end-1])
+println(c1[2:5])
+println(c1[[2,3,4,5]])
+println(c1[2:end])
