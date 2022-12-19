@@ -84,3 +84,23 @@ grades_2 = (History = (90,100), Arts = (95, 100))
 
 grades_total = merge(grades,grades_2)
 println(grades_total)
+
+#Working with Dictionaries in Julia
+cars = Dict("car_1" => 1000, "car_2" => 2000, "car_3" => 3000)
+println(cars)
+println(cars["car_1"])
+
+cars_2 = Dict(:car_1 => 1000, :car_2 => 2000, :car_3 => 3000)
+println(cars_2)
+println(cars_2[:car_1])
+
+println(haskey(cars_2, :car_1))
+
+delete!(cars_2, :car_1)
+println(haskey(cars_2, :car_1))
+
+println(keys(cars))
+println(values(cars))
+
+cars_3 = merge(cars, cars_2)
+println(cars_3)
