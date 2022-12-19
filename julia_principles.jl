@@ -21,4 +21,34 @@ println(2 * 3/3)
 
 println(6/2 * 3)
 
-#Commenting in Julia
+#Arrays
+
+array_1 = [1,2,3,4,5]
+array_2 = [1,2.0,3,4,5] #this will turn every value into a float
+
+string_1 = ["I", "code", "in", "Julia"]
+
+funtion_array_1 = [print,println,printstyled]
+
+array_3 = [1,2.0,"Julia"] #array of type "any"
+
+type_int = Int64[1,2,3,4,5]
+
+type_float = Float64[1,2,3,4,5] #the output will be float values
+
+type_string = String["This", "is", "Julia"]
+
+array_2d = [1 2 3 4; 5 6 7 8]
+println(array_2d)
+
+vector_1 = [1 2 3 4 5]
+
+array_rand = rand(5)
+println(array_rand)
+
+array_rand2 = rand(3,3)
+println(array_rand2)
+
+#Creating Ranges in Julia
+
+print(collect(1:10))
