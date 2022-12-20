@@ -184,3 +184,71 @@ else
 end
 
 #Loops in Julia
+
+for i in ["Adidas", "Nike", "Puma"]
+    print(i, " ") #printing text after variable works similar to Python
+end
+
+for i in "Adidas"
+    println(i)
+end
+
+for t in (1,2,3,4,5) #example with a tuple
+    print(t, ",")
+end
+
+for d in cars #Dictionary used previously
+    print(d, " ")
+end
+
+for s in Set([1,2,3,4,5]) #example with sets
+    print(s)
+end
+
+for range in 1:5
+    println(range)
+end
+
+for range in 1:5
+    @show range
+end
+
+for x in 1:10
+    if x % 2 ==0
+        println(x)
+    end
+end
+
+for x in 1:10 #example with prime numbers
+    if x > 1
+        for y in 2:(x/2+1) #not the best way to do it but to show an example
+            if x % y ==0
+                continue
+            else
+                println(x, "is a prime number")
+            end
+        end
+    end
+end
+
+for i in 1:10
+    j = i * 10
+    println("$(j) is $(i) times 10")
+end
+
+for i in 1:10
+    if i%2 == 0
+        continue #skip this part
+    end
+    println(i)
+end
+
+let a = 1 #for example of while cycle
+#let avoids the soft scope issue
+    while a < 10
+        println(a)
+        a += 1
+    end
+end
+
+#Smart Loops or Comprehensions in Julia
