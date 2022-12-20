@@ -104,3 +104,26 @@ println(values(cars))
 
 cars_3 = merge(cars, cars_2)
 println(cars_3)
+
+#Sets
+sports_brands = Set(["Adidas", "Nike", "Puma", "Rebook"])
+println(sports_brands)
+
+println(in("Chabelo",sports_brands))
+
+sports_brands_mexico = Set(["Adidas", "Nike", "Chabelo"])
+
+sports_brands_total = union(sports_brands, sports_brands_mexico) #Creates a new list without duplicates
+println(sports_brands_total)
+
+sports_brands_inner = intersect(sports_brands, sports_brands_mexico)
+println(sports_brands_inner)
+
+sports_brands_outer_1 = setdiff(sports_brands, sports_brands_mexico)
+println(sports_brands_outer_1)
+
+sports_brands_outer_2 = setdiff(sports_brands_mexico, sports_brands)
+println(sports_brands_outer_2)
+
+push!(sports_brands, "Chabelo")
+println(sports_brands)
