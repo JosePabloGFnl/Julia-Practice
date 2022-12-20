@@ -129,7 +129,6 @@ push!(sports_brands, "Chabelo")
 println(sports_brands)
 
 #Date Operations in Julia
-
 #three main datatypes for datetime:
 #Dates.Time
 #Dates.Date
@@ -159,3 +158,29 @@ date_format = DateFormat("dd-mm-yyyy") #adjust date format
 println(Dates.format(birthdate,date_format))
 
 #Conditional Operators in Julia
+a = 10
+
+println(a < 10 ? "Yes" : "No")
+
+b = 20
+
+println(a >= 10 || b < 20) #or condition
+println(a >= 10 && b < 20) #and condition
+
+if a > 10
+    println("a is greater than 10")
+elseif a < 10
+    println("a is less than 10")
+else
+    println("a is equal to 10")
+end
+
+country = "Mexico"
+
+if country == "Mexico"
+    println("The country mentioned is Mexico")
+else
+    println("The country mentioned isn't Mexico")
+end
+
+#Loops in Julia
