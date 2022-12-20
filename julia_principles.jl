@@ -105,7 +105,7 @@ println(values(cars))
 cars_3 = merge(cars, cars_2)
 println(cars_3)
 
-#Sets
+#Working with Sets in Julia
 sports_brands = Set(["Adidas", "Nike", "Puma", "Rebook"])
 println(sports_brands)
 
@@ -127,3 +127,35 @@ println(sports_brands_outer_2)
 
 push!(sports_brands, "Chabelo")
 println(sports_brands)
+
+#Date Operations in Julia
+
+#three main datatypes for datetime:
+#Dates.Time
+#Dates.Date
+#Dates.Datetime
+
+#importing
+using Dates
+
+println(now())
+println(today())
+
+birthdate = Date(2000,4,29) #yyyy,mm,dd format to define a date
+DateTime(2000,4,29,10,15,25) #yyyy,mm,dd,HH,MM,SS
+
+println(now(UTC))
+println(year(birthdate))
+println(year(now()))
+print(hour(now()))
+println(dayofweek(birthdate))
+println(dayname(birthdate))
+println(dayofquarter(birthdate))
+println(daysinmonth(birthdate))
+println(today() - birthdate)
+println(today() + Month(5))
+
+date_format = DateFormat("dd-mm-yyyy") #adjust date format
+println(Dates.format(birthdate,date_format))
+
+#Conditional Operators in Julia
