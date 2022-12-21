@@ -297,3 +297,43 @@ string_1 = replace(string_1, "love" => "adore")
 println(string_1)
 
 #Creating functions in Julia
+f(x) = x + x
+println(f(2))
+
+f(x,y) = x*2 - y
+println(f(2,3))
+
+function multiply(x,y)
+    return x * y
+end
+println(multiply(2,3))
+
+function convert_meter_to_inch(meter)
+    inches = meter * 39.37
+    return inches
+end
+println(convert_meter_to_inch(1.5))
+
+function bmi_index(weight, height) #BMI Index
+    BMI = weight/ (height^2)
+    if BMI <= 18.4
+        index = "You're underweight"
+    elseif BMI > 18.4 && BMI <= 24.9
+        index = "You're average weight"
+    else
+        index = "You're overweight"
+    end
+    return index
+end
+println(bmi_index(55,177))
+
+function convert_meter_to_inch(meter, name = "Patron")
+    inches = meter * 39.37
+    if name == "Patron"
+        println("Value for name is not supplied")
+    else
+        println("Hello ", name, " the inches are ", inches)
+    end
+    return inches
+end
+println(convert_meter_to_inch(2.3, "Pablo"))
