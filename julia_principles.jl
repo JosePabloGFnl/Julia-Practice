@@ -272,3 +272,28 @@ println([(x,y) for x in 1:3, y in 1:2])
 println([x for x in 1:10 if x%2 == 0])
 
 #String manipulation in Julia
+string_1 = "I love Julia"
+println(length(string_1))
+println(lastindex(string_1)) #works better than length, less complicated to calculate
+println(string_1[4])
+println(string_1[8:12])
+println(isascii(string_1)) #this might be very useful
+
+println("Love" * "Julia")
+println("Julia" ^ 5 )
+println("Love ","Julia")
+
+println(split(string_1))
+println(split(string_1,"e"))
+println(split(string_1,""))
+
+println(parse(Int64,"100"))
+println(parse(Float64,"100.5"))
+
+println(in('I', string_1))
+println(occursin("Love", string_1))
+println(findfirst("love", string_1))
+string_1 = replace(string_1, "love" => "adore")
+println(string_1)
+
+#Creating functions in Julia
