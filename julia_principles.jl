@@ -252,3 +252,23 @@ let a = 1 #for example of while cycle
 end
 
 #Smart Loops or Comprehensions in Julia
+x = [i for i in 1:10]
+println(x)
+
+x = [i*2 for i in 1:10]
+println(x)
+
+x = [i^2 for i in 1:10]
+println(x)
+
+s = Set([i for i in 1:10])
+println(s)
+
+#alphabet = Dict(string(Char(x1 + 64)) => x1 for x1 in 1:26)
+#println(alphabet)
+
+println([(x,y) for x in 1:3, y in 1:2])
+
+println([x for x in 1:10 if x%2 == 0])
+
+#String manipulation in Julia
