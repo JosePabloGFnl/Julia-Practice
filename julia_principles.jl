@@ -337,3 +337,28 @@ function convert_meter_to_inch(meter, name = "Patron")
     return inches
 end
 println(convert_meter_to_inch(2.3, "Pablo"))
+
+#Formatting numbers and string in Julia
+using Printf
+
+name = "Pablo"; #semi-colon avoids the line from being printed in a notebook block
+
+@printf("Hello %s", name) #same c++ format
+
+@sprintf("Hello %s", name) #basically the same as the previous line
+
+ch = 'i'
+@printf("%c", ch)
+
+x = 100
+@printf("Value of x is %d", x)
+
+y = 100.5
+@printf("Value of y is %f", y)
+
+@printf("Value of y is %.2f", y) #for decimals
+
+z = 2463417865
+@printf("%3e", z) #convert to scientific notation
+
+#Importing CSV files in Julia
